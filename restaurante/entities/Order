@@ -1,0 +1,65 @@
+{
+  "name": "Order",
+  "type": "object",
+  "properties": {
+    "table_number": {
+      "type": "number",
+      "description": "N\u00famero de mesa"
+    },
+    "items": {
+      "type": "array",
+      "description": "Platillos de la orden",
+      "items": {
+        "type": "object",
+        "properties": {
+          "menu_item_id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "quantity": {
+            "type": "number"
+          },
+          "unit_price": {
+            "type": "number"
+          },
+          "subtotal": {
+            "type": "number"
+          },
+          "notes": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pendiente",
+        "en_preparacion",
+        "lista",
+        "entregada",
+        "cancelada"
+      ],
+      "default": "pendiente",
+      "description": "Estado de la orden"
+    },
+    "total": {
+      "type": "number",
+      "description": "Total de la orden"
+    },
+    "notes": {
+      "type": "string",
+      "description": "Notas adicionales"
+    },
+    "customer_name": {
+      "type": "string",
+      "description": "Nombre del cliente"
+    }
+  },
+  "required": [
+    "table_number",
+    "status"
+  ]
+}

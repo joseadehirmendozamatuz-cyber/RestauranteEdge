@@ -1,0 +1,40 @@
+{
+  "name": "RestaurantTable",
+  "type": "object",
+  "properties": {
+    "number": {
+      "type": "number",
+      "description": "N\u00famero de mesa"
+    },
+    "capacity": {
+      "type": "number",
+      "description": "Capacidad de personas"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "disponible",
+        "ocupada",
+        "reservada",
+        "mantenimiento"
+      ],
+      "default": "disponible",
+      "description": "Estado de la mesa"
+    },
+    "location": {
+      "type": "string",
+      "enum": [
+        "interior",
+        "terraza",
+        "bar",
+        "privado"
+      ],
+      "description": "Ubicaci\u00f3n de la mesa"
+    }
+  },
+  "required": [
+    "number",
+    "capacity",
+    "status"
+  ]
+}

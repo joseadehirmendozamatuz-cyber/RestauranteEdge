@@ -1,0 +1,52 @@
+{
+  "name": "InventoryItem",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Nombre del ingrediente/producto"
+    },
+    "quantity": {
+      "type": "number",
+      "description": "Cantidad actual"
+    },
+    "unit": {
+      "type": "string",
+      "enum": [
+        "kg",
+        "litros",
+        "unidades",
+        "gramos",
+        "piezas"
+      ],
+      "description": "Unidad de medida"
+    },
+    "min_stock": {
+      "type": "number",
+      "description": "Stock m\u00ednimo antes de alerta"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "carnes",
+        "verduras",
+        "frutas",
+        "lacteos",
+        "bebidas",
+        "secos",
+        "condimentos",
+        "otros"
+      ],
+      "description": "Categor\u00eda del producto"
+    },
+    "cost_per_unit": {
+      "type": "number",
+      "description": "Costo por unidad"
+    }
+  },
+  "required": [
+    "name",
+    "quantity",
+    "unit"
+  ]
+}

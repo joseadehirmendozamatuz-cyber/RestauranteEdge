@@ -1,0 +1,44 @@
+{
+  "name": "MenuItem",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Nombre del platillo"
+    },
+    "description": {
+      "type": "string",
+      "description": "Descripci\u00f3n del platillo"
+    },
+    "price": {
+      "type": "number",
+      "description": "Precio del platillo"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "entradas",
+        "platos_fuertes",
+        "postres",
+        "bebidas",
+        "ensaladas",
+        "sopas"
+      ],
+      "description": "Categor\u00eda del platillo"
+    },
+    "image_url": {
+      "type": "string",
+      "description": "URL de imagen del platillo"
+    },
+    "available": {
+      "type": "boolean",
+      "default": true,
+      "description": "Si el platillo est\u00e1 disponible"
+    }
+  },
+  "required": [
+    "name",
+    "price",
+    "category"
+  ]
+}
